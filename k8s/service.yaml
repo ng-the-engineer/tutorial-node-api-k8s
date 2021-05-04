@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: tutorial-node-api-k8s
+  labels:
+    name: tutorial-node-api-k8s
+  annotations:
+    dev.okteto.com/auto-ingress: "true"
+spec:
+  type: ClusterIP
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 3001
+  selector:
+    name: tutorial-node-api-k8s
