@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: tutorial-node-api-k8s
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       name: tutorial-node-api-k8s
